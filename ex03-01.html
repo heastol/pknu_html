@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td{
+            border: 1px solid #e88c8c;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead style="background-color: rgb(138, 185, 185);">
+            <tr>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+            </tr>
+        </thead>
+        <tbody style="background-color: beige;">
+            <tr>
+                <td rowspan="2">국밥</td>
+                <td>2</td>
+                <td>3</td>
+                <td rowspan="2">비빔밥</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td colspan="2">라면</td>
+                <td>볶음밥</td>
+            </tr>
+        </tbody>
+        <tfoot style="background-color: rgb(186, 195, 236);">
+            <tr>
+                <td>10000</td>
+                <td colspan="2">6000</td>
+                <td colspan="2">8000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
