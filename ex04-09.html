@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        a{
+            color: rgb(13, 102, 105);
+        }
+        a :visited{
+            color: rgb(159, 75, 175);
+        }
+        a:active{
+            color: red;
+        }
+        button:disabled,
+        input:disabled{
+            background-color: #ccc;
+        }
+        input:focus{
+            background-color: #ff0;
+        }
+        input:active{
+            background-color: #f00;
+        }
+        .red-focus:focus{
+            background-color: red;
+        }
+        .blue-focus:focus{
+            background-color: blue;
+        }
+        div{
+            border: 1px solid black;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상선택자 응용</h1>
+    <a href="https://www.naver.com">네이버링크</a>
+    <input type="text"><button disabled>전송</button>
+    <hr>
+    <input type="text" class="red-focus" value="클릭하면 빨갛게 변합니다.">
+    <input type="text" class="blue-focus" value="클릭하면 파랗게 변합니다.">
+    <hr>
+    <input type="checkbox" id="eat">
+    <label for="eat">간식</label>
+    <input type="checkbox" id="meal">
+    <label for="meal">식사</label>
+    <hr>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
