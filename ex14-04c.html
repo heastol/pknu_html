@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = [
+            "딸기",
+            "바나나",
+            "사과",
+            "수박",
+            "배",
+            "키위",
+            "복숭아",
+            "포도"
+        ];
+
+        const inp1 = prompt(`${arr} 중 제거하고 싶은 품목을 입력하세요.`);
+
+        const delinp = arr.indexOf(inp1);
+
+        const choice = arr.includes(inp1);
+        if(choice){
+            arr.splice(delinp);
+        }else{
+            console.log("요소가 없습니다.");
+        }
+
+        const inp2 = prompt(`${arr} 외에 추가하고 싶은 품목을 입력하세요.`);
+        
+        if(arr.includes(inp2)){
+            alert("이미 목록에 있는 품목입니다.");
+        }else{
+            arr.push(inp2);
+        }
+
+        document.body.innerHTML = `<h1>과일 목록 관리</h1><h2>정리된 품목은 ${arr}입니다.</h2>`;
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 200px;
+        }
+        tr,
+        td {
+          border: 1px solid blue;
+          padding: 5px;
+        }
+      </style>
+      <script>
+        const inp = prompt("1부터 9까지 숫자중 하나를 입력하세요.");
+        const list = `<table>
+        <tr>
+          <td><h3>${inp}단</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 1 = ${inp * 1}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 2 = ${inp * 2}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 3 = ${inp * 3}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 4 = ${inp * 4}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 5 = ${inp * 5}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 6 = ${inp * 6}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 7 = ${inp * 7}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 8 = ${inp * 8}</h3></td>
+        </tr>
+        <tr>
+          <td><h3>${inp} x 9 = ${inp * 9}</h3></td>
+        </tr>
+      </table>`;
+        document.write(list);
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

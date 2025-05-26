@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <style>
+        .modal{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .modal.show{
+            display: flex;
+        }
+        .login{
+            background-color: white;
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            padding: 50px 50px 80px;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .modal2{
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .modal2.show{
+            display: flex;
+        }
+        .alert{
+            background-color: white;
+            width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            padding: 50px 50px 80px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+        input,form > button{
+            border: none;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.856);
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px;
+        }
+        form > button{
+            background-color: rgb(31, 90, 138);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="login">
+            <h2>로그인</h2>
+            <form action="">
+                <input type="text">
+                <input type="text">
+                <button type="submit">로그인</button>
+                <button id="reset" type="reset" onclick="fnReset()">취소</button>
+            </form>
+        </div>
+    </div>
+    <div id="modal2" class="modal2" onclick="modal2Off()">
+        <div class="alert">
+            모달이 활성화되면 배경이 흐려지거나 비활성화되어 사용자가 모달 내의 
+            작업에 집중할 수 있습니다. 사용자가 모달 내에서 제공하는 작업을 
+            완료하거나 닫기 버튼을 눌러야만 기존 화면으로 돌아갈 수 있습니다. 로그인
+            창, 경고 메시지, 설정 변경 등 다양한 용도로 사용됩니다.
+            <span class="badge rounded-pill text-bg-primary">new</span>
+        </div>
+    </div>
+    <h1>간단한 내용들</h1>
+    <button id="login-btn" onclick="fnOpen()">로그인</button>
+    <button id="alert-btn">열림</button>
+    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat eius animi earum at beatae libero consequatur deserunt quis autem nihil fuga tenetur quos natus, aut, nemo ad! Quibusdam dignissimos ex omnis totam enim hic itaque beatae! Porro, laudantium ipsum? Reiciendis, voluptatem dolores expedita, asperiores fuga doloremque repellendus cumque, dolorum mollitia totam et nemo. Incidunt illo accusantium eaque veritatis facere ab nihil! Hic aut magnam reprehenderit, natus facilis illo unde numquam repellendus quisquam harum, consequuntur eius soluta nihil quaerat. A recusandae corrupti at nulla accusantium sint inventore repudiandae molestiae rerum distinctio ipsam non obcaecati provident, alias iste dicta ratione nihil ipsa debitis sunt vel! Vero libero, totam tempora fugit, ad dolor odio praesentium odit inventore error qui temporibus ea excepturi possimus sint perferendis veritatis eveniet aperiam iste reprehenderit culpa? Consectetur quos perferendis, ab animi minima quisquam delectus iusto earum assumenda modi repudiandae dolore eveniet corrupti deserunt consequatur iste blanditiis hic. Libero quasi alias, est exercitationem facere itaque consectetur consequuntur impedit modi repudiandae nesciunt nihil ut culpa, minima similique vero temporibus, fuga veniam delectus soluta dolorem amet dolores tenetur. Accusamus officia praesentium aliquam odio ipsa, maxime repellat optio quae mollitia voluptas iure. Ipsum molestias nemo blanditiis quo laboriosam harum quod provident rerum.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iste dolor nihil quo facilis quas adipisci unde aliquid doloremque officia, voluptatem ex provident, dolore laudantium voluptates non voluptatibus magnam architecto eligendi reprehenderit maxime similique obcaecati ducimus. Molestiae aliquid quibusdam cupiditate vitae, ullam temporibus doloribus sed voluptates, ipsum, quae rem. Non maiores voluptate est nemo iste quia dolor magnam ullam quidem dolore, magni nam tempore fugit fuga, quae illo blanditiis tenetur molestiae. Vitae vero praesentium fuga dolorum eius, quidem itaque laboriosam? Corporis earum quod voluptatibus, natus totam qui quis ex obcaecati iusto doloremque aliquid cumque deleniti. Reiciendis assumenda est aliquam nesciunt iure ea sunt, a quos, eum rem distinctio, provident expedita? Distinctio eligendi molestias natus quam exercitationem omnis! Laudantium, molestias! Laudantium esse dolor ducimus voluptates hic! Temporibus fuga nemo voluptatibus numquam ducimus nihil quibusdam odit rerum commodi, expedita nam. Fugit ipsum quibusdam error distinctio, tempore adipisci officiis! Pariatur voluptate fugiat quo saepe iusto ipsam beatae. Nobis, at reprehenderit. Itaque repudiandae aperiam unde cupiditate pariatur harum debitis voluptate magnam excepturi expedita obcaecati, deserunt maiores officiis velit consequuntur rem necessitatibus? Nulla, nobis ab quibusdam cupiditate ipsam, laboriosam labore tempora illum quis esse at accusamus ullam quae debitis. Facere perferendis officiis minima iusto a.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptate ipsum recusandae eligendi laboriosam animi possimus tempora dolor expedita rerum. Sapiente voluptates dolor, incidunt laboriosam optio consequuntur voluptatem cum dolorem maiores rem obcaecati ab corrupti nobis. Molestias quas numquam facilis odit in, atque voluptates sequi est, voluptatum deleniti voluptas exercitationem. Soluta pariatur quis id minima numquam ipsa velit amet et. Possimus, odio? Aliquid facere illum eligendi consequuntur, rerum ratione nam eius sunt fugit ea illo accusamus autem perferendis inventore aut cupiditate non veniam? Suscipit excepturi dicta fuga quos voluptatem? Mollitia nemo voluptas quas dicta explicabo voluptate voluptatibus velit, veritatis est eos hic ratione modi, eveniet sed, architecto consequatur quidem impedit eum obcaecati nostrum esse tenetur illum delectus! Unde culpa voluptates corporis vel rerum cupiditate eum suscipit laborum. Numquam voluptatem, recusandae excepturi nam provident rerum quia est dolores repudiandae explicabo, ab sit iste quaerat commodi quibusdam, voluptate neque dicta saepe porro quod. Veritatis rerum, aliquam temporibus, neque laudantium quo odit qui rem, fugiat aspernatur facere. Illum amet et adipisci, minima quasi natus architecto a assumenda numquam sapiente nam similique rerum ex sit incidunt ut magnam quos itaque voluptatum. Sed velit ad quas totam, officia praesentium molestiae esse, accusantium ipsa necessitatibus est.</p>
+    <script>
+        const open = document.querySelector("#login-btn");
+        const modal = document.querySelector(".modal");
+        const reset = document.querySelector("#reset");
+        const fnOpen = () => {
+            modal.classList.toggle("show");
+        }
+        const fnReset = () => {
+            modal.classList.toggle("show");
+        }
+
+        const alertBtn = document.querySelector("#alert-btn");
+        const modal2On = () => {
+            modal2.classList.toggle("show");
+        };
+        const modal2Off = () => {
+            modal2.classList.toggle("show");
+        }
+        alertBtn.addEventListener("click", modal2On);
+    </script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

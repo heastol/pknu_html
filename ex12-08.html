@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let temp = prompt("온도를 입력해주세요.");
+        if(temp >= 32){
+            console.log("지금 온도는 " + temp + "이며, 상태는 정상온도를 넘겼습니다.");
+            document.write(`<h1>지금 온도는 ${temp} 이며, 상태는 정상온도를 넘겼습니다.</h1>`);
+        }else if(temp >= 28){
+            console.log("지금 온도는 " + temp + "이며, 정상온도에서 이하로 벗어났습니다.");
+            document.write(`<h1>지금 온도는 ${temp} 이며, 정상온도에서 이하로 벗어났습니다.</h1>`);
+        }else if(temp >= 22){
+            console.log("지금 온도는 " + temp + "이며, 갑갑하네요.");
+            document.write(`<h1>지금 온도는 ${temp} 이며, 갑갑하네요.</h1>`);
+        }else if(temp >= 16){
+            console.log("지금 온도는 " + temp + "이며, 시원하네요.");
+            document.write(`<h1>지금 온도는 ${temp} 이며, 시원하네요.</h1>`);
+        }else{
+            console.log("지금 온도는 " + temp + "이며, 보통이에요.");
+            document.write(`<h1>지금 온도는 ${temp} 이며, 보통이에요.</h1>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
